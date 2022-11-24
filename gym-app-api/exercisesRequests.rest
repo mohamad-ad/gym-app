@@ -1,0 +1,9 @@
+GET http://localhost:4000/exercises
+###
+GET http://localhost:4000/exercises/0001
+###
+GET http://localhost:4000/exercises?bodypart=cardio
+###
+GET http://localhost:4000/exercises?q=burpee
+###
+GET http://localhost:4000/exercises/bodyParts

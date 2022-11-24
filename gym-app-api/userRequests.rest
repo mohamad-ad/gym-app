@@ -1,0 +1,41 @@
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "username":"mohamad",
+    "password":"12345678",
+    "email":"mohamad2@hotmail.com",
+    "isAdmin": true
+}
+###
+GET  http://localhost:4000/users/me
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBjNzVlZGRhM2YzMzk5OGJjODFkNmIiLCJ1c2VybmFtZSI6Im1vaGFtYWQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjYxNzYxMTgyfQ.WdLCyueSkHEeIbiafYdpzQOa3qdBmcGO2NFY6v_vuPA
+
+
+###
+POST http://localhost:4000/auth
+Content-Type: application/json
+
+{
+    "email":"mohamad2@hotmail.com",
+    "password":"12345678"
+}
+###
+
+POST  http://localhost:4000/users/favorite
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBmODM0N2M1NjFmMjQxMTc3ZDgwN2YiLCJ1c2VybmFtZSI6Im1vaGFtYWQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjYxOTcwNTc5fQ.AxiRYzqZI_YnYeS6Qu3L9X-OPRnrARCBokO-Ki-_96c
+
+{
+    "id":"0002"
+}
+###
+DELETE   http://localhost:4000/users/favorite/0001
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBmODM0N2M1NjFmMjQxMTc3ZDgwN2YiLCJ1c2VybmFtZSI6Im1vaGFtYWQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjYxOTcwNTc5fQ.AxiRYzqZI_YnYeS6Qu3L9X-OPRnrARCBokO-Ki-_96c
+
+###
+GET   http://localhost:4000/users/favorite
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzBmODM0N2M1NjFmMjQxMTc3ZDgwN2YiLCJ1c2VybmFtZSI6Im1vaGFtYWQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjYxOTcwNTc5fQ.AxiRYzqZI_YnYeS6Qu3L9X-OPRnrARCBokO-Ki-_96c
+
+
